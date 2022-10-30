@@ -1,10 +1,22 @@
 <html class="sl-theme-dark">
   <head>
     <title>Dub View</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/themes/light.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/themes/dark.css" />
+    <link rel="stylesheet" href="app.css" />
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/shoelace.js"></script>
     <script src="https://unpkg.com/htmx.org@1.8.2"></script>
+    <script type="module" src="app.js"></script>
   </head>
   <body>
+    <sl-drawer placement="start" class="drawer-placement-start">
+      <div slot="label" class="drawer-header">
+        <sl-icon name="camera-video" style="position: relative; top: 0.15em"></sl-icon>
+        Dub View
+      </div>
+      <sl-button>Set Video File</sl-button>
+      <sl-button>Set Audio File</sl-button>
+      <sl-button slot="footer" variant="primary">Close</sl-button>
+    </sl-drawer>
+    <sl-icon-button name="gear" label="Settings" id="drawer-toggle"></sl-icon-button>
   </body>
 </html>
